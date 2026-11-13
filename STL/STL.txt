@@ -1,0 +1,76 @@
+Containers
+Algorithms
+Functions
+Iterators
+
+# Containers :- 
+1.Pair -> store Two values in one variable -> under std::Pair
+
+2.Vector -> dynamic array ,  that automatically resizes as element
+            are added or removed. doesnot have fixed size. -> under std::Vector
+    - back bone of the DSA
+    - Initialisation
+    - push_back/emplace_back -> adds a new element at the end of the vector
+    - pop_back -> delete the element from last index
+    - iterator -> allow traversal through the elements in the vector. 
+                Iterators behave like pointers and can be used for accessing elements or performing operations on the vector.
+    - front -> returns a reference to the first element in the vector. This is useful when you need to access the starting element without modifying the vector.
+    - back -> returns a reference to the last element in the vector. It’s typically used when the last inserted element needs to be accessed or modified.
+    - erase -> removes an element from the vector by a position causing all subsequent elements to be shifted one position to the left.This helps reduces the size of the vector by one.
+    - insert -> insert element at iterator position
+    - swap -> swap two vectors elements
+    - clear -> delete or clean the vector
+    - dupVec -> duplicate the vector
+
+
+3. List -> Lists are sequence containers that support non-contiguous memory allocation. Unlike vectors, which offer faster traversal, lists have slower traversal times.
+
+    - push_front / emplace_front -> inserts a new element at the beginning of the list
+    - push_back/emplace_back -> adds a new element at the end of the vector
+    - all the functions are same as vector
+
+4. Deque -> A deque is a sequence container with the ability to expand and contract on both ends efficiently. 
+            It supports fast insertions and deletions at both the beginning and the end, 
+            making it more flexible than a vector or list in scenarios where elements are 
+            frequently added or removed from both ends.
+
+    - all the functions are same as vector/list
+
+5. Stack -> the stack is a powerful container adapter that follows the Last In, First Out (LIFO) principle. 
+            It provides a streamlined interface for adding and removing elements from one end.
+
+    - Push / Emplace -> adds an element to the top of the stack
+    - Top -> returns the element at the top of the stack without removing it.
+    - Pop -> delete the top most element from stack
+    - Swap -> operation swaps the contents of two stacks.
+    - Empty ->  checks if the stack is empty. It returns 1(true) if the stack is empty, otherwise 0(false).
+
+6. Queue -> the queue is a versatile container adapter that operates on a 
+            First In, First Out (FIFO) basis. It facilitates efficient data 
+            handling by allowing elements to be inserted at one end and removed 
+            from the other making it particularly useful for managing tasks and scheduling operations in a sequential manner.
+
+    - same as it stack function only top remove and add front
+    - Front -> returns the element at the front of the queue without removing it.
+
+7. Priority Queue -> stores the highest value element at the top
+
+    - rest of functions are same as Queue/Stack
+    - Top is use instead of Front
+
+8. Set -> Set stores unique elements in a sorted manner. It automatically removes 
+        duplicate entries and provides efficient search operations.
+
+    - Insert / Emplace -> adds a new element if it's not already present, returning a pair indicating success and an iterator.
+    - Find -> searches for a specified element within the set. It returns an iterator pointing to the element if found, or to the end() of the set if the element is not present.
+    - Erase -> removes elements from the set by specifying either an iterator pointing to the element or the element’s value directly.
+    - Lower Bound -> Get the iterator to the first element that is greater than or equal to the given value.
+    - Upper Bound -> Get the iterator to the first element that is greater than the given value.
+    - count -> if element in set it's give a 1, otherwise gives 0.
+
+9. MultiSet -> allows storing multiple occurrences of the same element. It is useful when you need to keep duplicates and still maintain sorted order.
+    - Insert / Emplace -> adds a new element even it's already present.
+    - erase -> delete all duplicate element of given number.
+
+10. Unordered Set -> stores unique elements in an unsorted manner. It provides faster search operations compared to a set due to hashing.
+
