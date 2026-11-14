@@ -74,3 +74,41 @@ Iterators
 
 10. Unordered Set -> stores unique elements in an unsorted manner. It provides faster search operations compared to a set due to hashing.
 
+11. Map -> stores key-value pairs in a sorted order based on the keys. It provides efficient lookup and insertion operations.
+    - Insert / Emplace / Assignment -> Key-value pairs can be added to a map using insert, emplace, or assignment.
+                                    -> The insert function adds a new pair without modifying existing entries if the key is present.
+                                    -> The emplace method constructs the pair in place avoiding unnecessary copies or moves.
+                                    -> Assignment updates the value for an existing key or adds a new key-value pair if the key is absent.
+    - Find
+    - empty
+    - Lower Bound
+    - Upper Bound
+    - Unordered map -> store key and value in reverse of Initialization
+                    -> fast search functionality compare to map
+
+12. MultiMap -> allows storing multiple values for the same key in a sorted order.
+    - Equal Range -> function provides a range of elements with a specific key in a multimap. It returns a pair of iterators: 
+                    the first iterator points to the first element with the specified key, and the second iterator points 
+                    just past the last element with that key.
+
+
+# Functions and Algorithms
+
+1. Sort -> Sort values of Array, Vector, Map, Queue, Set.... using sort()
+        -> sorts elements in a given range [first, last] into ascending order by default. It can also take a custom comparator for sorting.
+
+2. Accumulate -> calculates the sum of a range of elements [first, last]. It is part of the library.
+
+3. Count -> returns the number of occurrences of a value in a range [first, last].
+
+4. Find -> searches for the first occurrence of a value in a range [first, last] and returns an iterator to it.
+
+5. Permutation
+    - Next Permutation -> rearranges elements into the next lexicographically greater permutation. If the current permutation is the largest, it transforms it into the smallest permutation.
+    - Prev Permutation -> reverse of next permutation
+
+6. Min Max Element -> returns an iterator to the smallest/largest element in a range [first, last].
+
+7. Reverse -> reverses the order of elements in a range [first, last].
+
+8. Comparator -> that determines the order of elements during sorting or other operations. It is often passed to functions like `sort`.

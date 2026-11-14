@@ -34,7 +34,7 @@ void explainVector()
     cout << endl;
 
     // auto assigned elements in vector 
-    vector<int> vec2(5, 2); //auto assign element with 0 or we can assign our own values(5, 2)
+    vector<int> vec2(5); //auto assign element with 0 or we can assign our own values(5, 2)
     vec2.push_back(1); // after the 5 zero
     for(int i : vec2)
     {
@@ -44,7 +44,7 @@ void explainVector()
 
     // duplicate the vector
     // vector<int> dupVec(vec); // duplicate the vector 
-    vector<int> dupVec(vec.begin() + 1, vec.end()); // start with index 1
+    vector<int> dupVec(vec.begin() + 1, vec.end()); // start with perticular index 
     for(int i : dupVec)
     {
         cout << i << " ";
@@ -96,7 +96,7 @@ void explainVector()
 
 
 
-/*  //iterator -> to access the address of element
+/*  //iterator -> to access element with their address
     vector<int>::iterator beginItr = vec.begin();
     // vector<int>::iterator endItr = vec.end(); //pointing to After the last element 
     auto endItr = vec.end(); // auto is c++ keyword assign for iterator
@@ -231,8 +231,8 @@ void explainPriorityQueue()
 void explainSet()
 {
     system("cls");
-    // store only unique element in ascending order
 
+    // store only unique element in ascending order
     set<int> st;
     st.insert(11);
     st.insert(12);
@@ -360,11 +360,83 @@ void explainUnorderedSet()
 
 void explainMap()
 {
+    system("cls");
+    // key and value could be anything we want
+    map<int, string> mpp; //map<key, value>
+    // map store value in ascending order of key
+    // use unique key for every value
+    mpp[1] = "Aksh";
+    mpp[2] = "Shivam";
+    mpp.insert({4, "Karan"}); 
+    mpp[3] = "Aksh";
+
+    // print map 
+    for(auto it: mpp)
+    {
+        cout << it.first << " -> " << it.second << endl;
+    }
+    cout << endl;
+
+    auto it = mpp.find(4);
+    cout << (*it).first << " -> " << (*it).second << endl;
+
+}
+
+void explainUnorderedMap()
+{
+    system("cls");
+    // key and value could be anything we want
+    unordered_map<int, string> umpp; //map<key, value>
+    // map store value in reverse order of key init
+    // use unique key for every value
+    umpp[1] = "Aksh";
+    umpp.insert({4, "Karan"}); 
+    umpp[2] = "Shivam";
+    umpp[3] = "Rahul";
+
+    // print map 
+    for(auto it: umpp)
+    {
+        cout << it.first << " -> " << it.second << endl;
+    }
+    cout << endl;
+
+    auto it = umpp.find(4);
+    cout << (*it).first << " -> " << (*it).second << endl;
+
+}
+
+void explainMultiMap()
+{
+    system("cls");
+
+    // store duplicate key in ascending order 
+    multimap<int, string> mmp;
+    mmp.insert({1, "Aksh"});
+    mmp.insert({3, "Shivam"});
+    mmp.insert({2, "Aksh"});
+    mmp.insert({3, "Shivam"});
+    mmp.insert({1, "Rahul"});
+    mmp.insert({1, "Aksh"});
+
+    for(auto it : mmp)
+    {
+        cout << it.first << " -> " << it.second << endl;
+    }
+    cout << endl;
+
+    //equal range function
+    auto it = mmp.equal_range(1);
+    for(auto i = it.first; i != it.second ; i++)
+    {
+        cout << (*i).first << " -> " << (*i).second << endl;
+    }
+    cout << endl;
 
 }
 
 int main()
 {
-    explainMap();
+    explainMultiMap();
     return 0;
 }
